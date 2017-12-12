@@ -1,0 +1,29 @@
+// Global styling for this theme
+
+html {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  @include body-font;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $secondary;
+  opacity: 0.75;
+  z-index: -1;
+}
