@@ -29,7 +29,6 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: ##E855B2;
   background-color: #E855B2;
   opacity: 0.75;
   z-index: -1;
@@ -49,7 +48,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:rgb (17,17,17,0.8);
+  background-color: rgba (17,17,17,0.8);
   transform: skewY(4deg);
   transform-origin: bottom right;
 }
