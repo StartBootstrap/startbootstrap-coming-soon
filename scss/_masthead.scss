@@ -9,6 +9,7 @@
     right: 0;
     left: 0;
     width: 100%;
+    min-height: 35rem;
     height: 100%;
     background-color: fade-out($primary, 0.2);
     transform: skewY(4deg);
@@ -43,9 +44,11 @@
 @media (min-width: 768px) {
   .masthead {
     height: 100%;
+    min-height: 0;
     width: 40.5rem;
     padding-bottom: 0;
     .masthead-bg {
+      min-height: 0;
       transform: skewX(-8deg);
       transform-origin: top right;
     }

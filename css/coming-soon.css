@@ -14,6 +14,7 @@ h6 {
 
 body {
   height: 100%;
+  min-height: 35rem;
   position: relative;
   font-family: 'Source Sans Pro';
   font-weight: 300;
@@ -22,10 +23,17 @@ body {
 .overlay {
   position: absolute;
   height: 100%;
+  min-height: 35rem;
   width: 100%;
   background-color: #cd9557;
   opacity: 0.75;
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    min-height: 0;
+  }
 }
 
 .masthead {
@@ -41,6 +49,7 @@ body {
   right: 0;
   left: 0;
   width: 100%;
+  min-height: 35rem;
   height: 100%;
   background-color: rgba(0, 46, 102, 0.8);
   transform: skewY(4deg);
@@ -75,10 +84,12 @@ body {
 @media (min-width: 768px) {
   .masthead {
     height: 100%;
+    min-height: 0;
     width: 40.5rem;
     padding-bottom: 0;
   }
   .masthead .masthead-bg {
+    min-height: 0;
     transform: skewX(-8deg);
     transform-origin: top right;
   }
@@ -94,8 +105,16 @@ body {
   }
 }
 
+.social-icons {
+  position: absolute;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
 .social-icons ul {
   margin-top: 2rem;
+  width: 100%;
+  text-align: center;
 }
 
 .social-icons ul > li {
@@ -117,12 +136,15 @@ body {
 
 @media (min-width: 768px) {
   .social-icons {
+    margin: 0;
     position: absolute;
     right: 2.5rem;
     bottom: 2rem;
+    width: auto;
   }
   .social-icons ul {
     margin-top: 0;
+    width: auto;
   }
   .social-icons ul > li {
     display: block;
