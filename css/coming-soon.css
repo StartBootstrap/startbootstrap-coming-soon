@@ -20,26 +20,44 @@ body {
   font-weight: 300;
 }
 
-.overlay {
-  position: absolute;
-  height: 100%;
-  min-height: 35rem;
-  width: 100%;
-  background-color: #cd9557;
-  opacity: 0.75;
-  z-index: -1;
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
 }
 
-@media (min-width: 768px) {
-  .overlay {
-    min-height: 0;
+@media (pointer: coarse) and (hover: none) {
+  body {
+    background: url("../img/bg-mobile-fallback.jpg") #002E66 no-repeat center center scroll;
+    background-position: cover;
   }
+  body video {
+    display: none;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #cd9557;
+  opacity: 0.7;
+  z-index: 1;
 }
 
 .masthead {
   position: relative;
   overflow: hidden;
   padding-bottom: 3rem;
+  z-index: 2;
 }
 
 .masthead .masthead-bg {
@@ -109,6 +127,7 @@ body {
   position: absolute;
   margin-bottom: 2rem;
   width: 100%;
+  z-index: 2;
 }
 
 .social-icons ul {

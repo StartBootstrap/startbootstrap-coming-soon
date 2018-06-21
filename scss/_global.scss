@@ -20,15 +20,35 @@ body {
   @include body-font;
 }
 
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  body {
+    background: url('../img/bg-mobile-fallback.jpg') $primary no-repeat center center scroll;
+    background-position: cover;
+  }
+  body video {
+    display: none;
+  }
+}
+
 .overlay {
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  min-height: 35rem;
   width: 100%;
   background-color: $secondary;
-  opacity: 0.75;
-  z-index: -1;
-  @media (min-width: 768px) {
-    min-height: 0;
-  }
+  opacity: 0.7;
+  z-index: 1;
 }
