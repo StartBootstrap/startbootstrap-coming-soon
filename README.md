@@ -4,7 +4,7 @@
 
 ## Preview
 
-[![Coming Soon Preview](https://startbootstrap.com/assets/img/templates/coming-soon.jpg)](https://blackrockdigital.github.io/startbootstrap-coming-soon/)
+[![Coming Soon Preview](https://startbootstrap.com/assets/img/screenshots/themes/coming-soon.png)](https://blackrockdigital.github.io/startbootstrap-coming-soon/)
 
 **[View Live Preview](https://blackrockdigital.github.io/startbootstrap-coming-soon/)**
 
