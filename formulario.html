@@ -1,0 +1,124 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulario: Contrato de arrendamiento</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        
+        <style>
+            .fianzaDiv{
+                display:none;
+            }  
+            .fianzabienDiv{
+                display:none;
+            }  
+        </style>
+		<meta name="author" content="">
+
+		<!-- Bootstrap -->
+		<link href="./examples/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="./examples/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+		<!-- Editor CSS -->
+		<link href="./examples/css/editor.css" rel="stylesheet">
+
+		<!-- See closing body for JS -->
+
+        <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="navbar"><span>Contrato de arrendamiento</span></div>
+            <div id="wrapper">
+                ¿Cómo se va a llamar la persona que va a rentar tu propiedad?
+                <input type="text" id="R1" value="" placeholder="Nombre"><br>
+                ¿Cuál es su domicilio?
+                <input type="text" id="R11" value="" placeholder="Domicilio"><br>
+                ¿Cuál es el nombre de la persona que va a alquilar la propiedad?
+                <input type="text" id="R2" value="" placeholder="Domicilio"><br>
+                ¿Cuál es su dirección? = R2.1
+                <input type="text" id="R21" value="" placeholder="Domicilio"><br>
+                ¿Se va a estipular alguna fianza? <input type="radio" value="fianzaSI" name="fianza" /> sí/<input type="radio" value="fianzaNO" name="fianza" />no<br>                
+                <!--Afinar este tema DIV-->
+                - [en caso afirmativo]
+                <div id="showFianza" class="fianzaDiv">                
+                    ¿Cómo se llama el fiador? = R3.1
+                    <input type="text" id="R31" value="" placeholder="Domicilio"><br>
+                    ¿En dónde vive (domicilio)? = R3.2
+                    <input type="text" id="R32" value="" placeholder="Domicilio"><br>
+                    ¿El fiador va a responder con algún bien? = <input type="radio" value="fianzabienSI" name="fianzabien" /> sí/<input type="radio" value="fianzabienNO" name="fianzabien" />no<br>
+                    <div id="showFianzabien" class="fianzabienDiv">   
+                        ¿Cuál es el bien que va servir de fianza?
+                        <input type="text" id="R34" value="" placeholder="Domicilio"><br>
+                    </div>
+                </div>
+
+                ¿Cúal es la ubicación exacta de la propiedad que se va a rentar? = R4
+                <input type="text" id="R4" value="" placeholder="Domicilio"><br>
+
+                ¿Qué uso o fin se le va a dar a la propiedad?<input type="radio" value="fianzaSI" name="fianza" /> Casa habitación/<input type="radio" value="fianzaNO" name="fianza" />Local comercial<br>
+                
+                ¿Cuánto se va a pagar de renta? = R6
+                <input type="text" id="R6" value="" placeholder="Domicilio"><br>
+
+                ¿Deseas indicar alguna cuenta bancaria para depósitos y transferencias? <input type="radio" value="fianzaSI" name="fianza" /> sí/<input type="radio" value="fianzaNO" name="fianza" />no<br>
+                - [en caso afirmativo]
+                ¿Cuáles son los números de cuenta bancaria y CLABE? = R6.2
+                <input type="text" id="R62" value="" placeholder="Domicilio"><br>
+
+                ¿Cuánto tiempo va a durar el arrendamiento? = R7
+                <input type="text" id="R7" value="" placeholder="Domicilio"><br>
+
+                ¿Desea que se haga algún depósito en garantía?<input type="radio" value="fianzaSI" name="fianza" /> sí/<input type="radio" value="fianzaNO" name="fianza" />no<br>
+                - [en caso afirmativo]
+                ¿Cuántas rentas quieres que se consignen como garantía? = R8.1
+                <input type="text" id="R81" value="" placeholder="Domicilio"><br>
+
+                ¿Quieres estipular un plazo forzoso? <input type="radio" value="fianzaSI" name="fianza" /> sí/<input type="radio" value="fianzaNO" name="fianza" />no<br>
+                - [en caso afirmativo]
+                ¿Cuánto tiempo quieres que sea obligatorio? = R9.1
+                <input type="text" id="R91" value="" placeholder="Domicilio"><br>
+
+                ¿Quieres estipular alguna pena en caso de incumplimiento?  <input type="radio" value="fianzaSI" name="fianza" /> sí/<input type="radio" value="fianzaNO" name="fianza" />no<br>
+                - [en caso afirmativo]
+                ¿Cuánto quieres que se cobre? = R10.1
+                <input type="text" id="R101" value="" placeholder="Domicilio"><br>
+
+
+                <input type="button" id="button" value="Generar!" />
+
+                <script>
+                    $('#button').click(function() {
+                        var doc = new jsPDF();
+                        var R1 = $('#R1').val();
+                        doc.text(20, 20, '¿Cómo se llama la persona que va a rentar su propiedad?: ' + R1);
+                        var R11 = $('#R11').val();
+                        doc.text(20, 20, '\n¿Cuál es su domicilio?: ' + R11);
+                        doc.save('test.pdf');
+                    });
+
+                    $('input[type="radio"]').click(function(){
+                        var radioValue = $("input[name='fianza']:checked").val();
+                        var radioValue2 = $("input[name='fianzabien']:checked").val();
+                        
+
+                        if(radioValue == "fianzaSI"){
+                            $("div.fianzaDiv").show();
+                        }
+                        if(radioValue == "fianzaNO"){
+                            $("div.fianzaDiv").hide();
+                        }
+                        if(radioValue2 == "fianzabienSI"){
+                            $("div.fianzabienDiv").show();
+                        }
+                        if(radioValue2 == "fianzabienNO"){
+                            $("div.fianzabienDiv").hide();
+                        }
+                        
+                    });
+                </script>
+            </div>
+    </body>
+</html>
