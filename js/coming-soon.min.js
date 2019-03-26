@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Coming Soon v5.0.3 (https://startbootstrap.com/template-overviews/coming-soon)
+ * Start Bootstrap - Coming Soon v5.0.4 (https://startbootstrap.com/template-overviews/coming-soon)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-coming-soon/blob/master/LICENSE)
  */
