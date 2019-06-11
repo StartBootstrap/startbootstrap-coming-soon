@@ -100,6 +100,12 @@ video {
   font-weight: 700;
 }
 
+.masthead .masthead-content img {
+  height: 120px;
+  float: right;
+  padding-right: 50px;
+}
+
 .masthead .masthead-content .input-group-newsletter input {
   height: auto;
   font-size: 1rem;
