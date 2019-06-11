@@ -223,3 +223,12 @@ video {
 .input {
   font-weight: 300 !important;
 }
+
+#contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#contact #phone a {
+  text-decoration: none;
+}
