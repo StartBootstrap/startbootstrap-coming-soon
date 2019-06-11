@@ -1,14 +1,31 @@
-language:      node_js
-git:
-  depth:       3
-node_js:
-  - "node"
-install:       npm install
-script:
-  - npm test
-  - gulp
-cache:
-  directories:
-    - node_modules
+language: ruby
+rvm:
+  - 2.6.0
+
+before_install:
+  # Here, we decrypt a passwordless ssh key for acting as a user on the server named "travis"
+  #   # See: https://docs.travis-ci.com/user/encrypting-files/#Automated-Encryption
+  - if [ "$TRAVIS_SECURE_ENV_VARS" == true ]; then openssl aes-256-cbc -K $encrypted_3a24d53b15ee_key -iv $encrypted_3a24d53b15ee_iv -in scripts/id_rsa.enc -out scripts/id_rsa -d
+  - if [ "$TRAVIS_SECURE_ENV_VARS" == true ]; then chmod 400 scripts/id_rsa; fi
+
+before_script:
+  - bundle exec jekyll build
+
+cache: bundler
+
+deploy:
+  # Cleanup removes keys and build artefacts.
+  # See: https://docs.travis-ci.com/user/deployment/#Uploading-Files-and-skip_cleanup
+  skip_cleanup: true
+  provider: script
+  script: bash scripts/deploy.sh patrick scripts/id_rsa webserv.hypha.coop 10025
+  on:
+    branch:
+      - master
+
 notifications:
-  email:       false
+  email:
+    recipients:
+      - patrick.c.connolly@gmail.com
+    on_success: change
+    on_failure: change

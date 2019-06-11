@@ -5,3 +5,7 @@ linkedin: https://www.linkedin.com/company/hyphacoop/
 twitter: https://twitter.com/hyphacoop/
 # instagram: https://instagram.com/hyphacoop/
 # facebook: https://www.facebook.com/hyphacoop/
+
+exclude:
+# Avoid sending unencrypted private deploy key data.
+- scripts/
