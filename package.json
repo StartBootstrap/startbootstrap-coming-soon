@@ -1,9 +1,9 @@
 {
     "title": "Coming Soon",
     "name": "startbootstrap-coming-soon",
-    "version": "5.0.5",
+    "version": "5.0.6",
     "scripts": {
-        "start": "gulp watch"
+        "start": "node_modules/.bin/gulp watch"
     },
     "description": "Coming Soon is a Bootstrap 4 coming soon page theme.",
     "keywords": [
@@ -29,12 +29,12 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-coming-soon.git"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.8.2",
+        "@fortawesome/fontawesome-free": "5.9.0",
         "bootstrap": "4.3.1",
         "jquery": "3.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.5",
+        "browser-sync": "2.26.7",
         "del": "4.1.1",
         "gulp": "4.0.2",
         "gulp-autoprefixer": "6.1.0",
