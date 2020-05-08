@@ -207,11 +207,11 @@ video {
   font-weight: 300 !important;
 }
 
-#logo {
+.logo {
     position: relative;
 }
 
-#logo img {
+.logo img {
     position: absolute;
     top: 0px;
     right: 0px;
