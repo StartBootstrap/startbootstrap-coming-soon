@@ -206,3 +206,12 @@ video {
 .input {
   font-weight: 300 !important;
 }
+
+#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
