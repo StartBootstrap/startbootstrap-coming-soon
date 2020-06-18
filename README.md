@@ -1,6 +1,6 @@
-# [Start Bootstrap - Coming Soon](https://startbootstrap.com/template-overviews/coming-soon/)
+# [Start Bootstrap - Coming Soon](https://startbootstrap.com/themes/coming-soon/)
 
-[Coming Soon](https://startbootstrap.com/template-overviews/coming-soon/) is a simple coming soon theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a background video with a mobile background image fallback.
+[Coming Soon](https://startbootstrap.com/themes/coming-soon/) is a simple coming soon theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a background video with a mobile background image fallback.
 
 ## Preview
 
@@ -19,7 +19,8 @@
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/coming-soon/)
+
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/themes/coming-soon/)
 * Install via npm: `npm i startbootstrap-coming-soon`
 * Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-coming-soon.git`
 * [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-coming-soon)
@@ -36,17 +37,17 @@ After installation, run `npm install` and then run `npm start` which will open u
 
 #### Gulp Tasks
 
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
+* `gulp` the default task that builds everything
+* `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
+* `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
+* `gulp js` minifies the themes JS file
+* `gulp vendor` copies dependencies from node_modules to the vendor directory
 
 You must have npm installed globally in order to use this build environment.
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-coming-soon/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/template-overviews/coming-soon/).
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-coming-soon/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/themes/coming-soon/).
 
 ## About
 
