@@ -26,9 +26,11 @@ html(lang='en')
 
     body
 
-        .overlay
+        // Background Video
         video.bg-video(playsinline='playsinline', autoplay='autoplay', muted='muted', loop='loop')
             source(src='assets/mp4/bg.mp4', type='video/mp4')
+
+        // Masthead
         .masthead
             .masthead-content.text-white
                 .container-fluid.px-4.px-lg-0
@@ -37,7 +39,10 @@ html(lang='en')
                         | We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!
                     .input-group.input-group-newsletter
                         input.form-control(type='email', placeholder='Enter email address...', aria-label='Enter email address...', aria-describedby='submit-button')
-                        button.btn.btn-primary(type='button') Notify Me!
+                        button#submit-button.btn.btn-primary(type='button') Notify Me!
+
+        // Social Icons
+        // For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands
         .social-icons
             .d-flex.flex-row.flex-lg-column.justify-content-center.align-items-center.h-100.mt-3.mt-lg-0
                 a.btn.btn-dark.m-3(href='#!')
@@ -46,16 +51,6 @@ html(lang='en')
                     i.fab.fa-facebook-f
                 a.btn.btn-dark.m-3(href='#!')
                     i.fab.fa-instagram
-            //- ul.list-unstyled.text-center.mb-0
-            //-     li.list-unstyled-item
-            //-         a(href='#!')
-            //-             i.fab.fa-twitter
-            //-     li.list-unstyled-item
-            //-         a(href='#!')
-            //-             i.fab.fa-facebook-f
-            //-     li.list-unstyled-item
-            //-         a(href='#!')
-            //-             i.fab.fa-instagram
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js')

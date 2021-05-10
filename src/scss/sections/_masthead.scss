@@ -1,3 +1,7 @@
+//
+// Masthead
+// 
+
 .masthead {
     position: relative;
     overflow: hidden;
@@ -19,6 +23,7 @@
         background-color: fade-out($black, 0.15);
     }
 
+    // Masthead content element
     .masthead-content {
         position: relative;
         max-width: 40rem;
@@ -37,6 +42,7 @@
             }
         }
 
+        // Styling for the signup form input
         .input-group-newsletter {
             input {
                 height: auto;
