@@ -10853,7 +10853,7 @@ body {
 }
 body:before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -10962,13 +10962,24 @@ video.bg-video {
   }
 }
 .social-icons {
-  display: flex;
-  height: 100%;
+  position: relative;
   z-index: 2;
+}
+.social-icons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100rem;
 }
 
 @media (min-width: 992px) {
   .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
     right: 2.5rem;
     width: auto;
   }
