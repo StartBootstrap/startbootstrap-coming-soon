@@ -51,18 +51,20 @@ html(lang='en')
 
                         // Email address input
 
-                        .input-group.input-group-newsletter
-                            input#email.form-control(
-                                type='email',
-                                placeholder='Enter email address...',
-                                aria-label='Enter email address...',
-                                data-sb-validations='required,email'
-                            )
-                            .invalid-feedback(data-sb-feedback='email:required')
-                                | An email is required.
-                            .invalid-feedback(data-sb-feedback='email:email')
-                                | Email is not valid.
-                            button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
+                        .row.input-group-newsletter
+                            .col
+                                input#email.form-control(
+                                    type='email',
+                                    placeholder='Enter email address...',
+                                    aria-label='Enter email address...',
+                                    data-sb-validations='required,email'
+                                )
+                            .col-auto
+                                button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
+                        .invalid-feedback.mt-2(data-sb-feedback='email:required')
+                            | An email is required.
+                        .invalid-feedback.mt-2(data-sb-feedback='email:email')
+                            | Email is not valid.
 
                         // Submit success message
                         //
@@ -70,11 +72,11 @@ html(lang='en')
                         // has successfully submitted
 
                         #submitSuccessMessage.d-none
-                            .text-center.mb-3
+                            .text-center.mb-3.mt-2
                                 .fw-bolder Form submission successful!
                                 | To activate this form, sign up at
                                 br
-                                a(href='https://startbootstrap.com/solution/contact-form') https://startbootstrap.com/solution/contact-form
+                                a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
 
                         // Submit error message
                         //
@@ -82,7 +84,7 @@ html(lang='en')
                         // an error submitting the form
 
                         #submitErrorMessage.d-none
-                            .text-center.text-danger.mb-3 Error sending message!
+                            .text-center.text-danger.mb-3.mt-2 Error sending message!
 
         // Social Icons
         // For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands
